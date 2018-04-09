@@ -1,7 +1,7 @@
 package com.mql.redhope.models;
 
 import java.io.Serializable;
-import java.util.Date;
+import java.sql.Timestamp;
 import java.util.Set;
 import javax.persistence.Entity;
 import javax.persistence.FetchType;
@@ -22,7 +22,7 @@ public class User implements Serializable {
 
   private String password;
 
-  private Date createdAt;
+  private Timestamp createdAt;
 
   private Boolean isActive;
 
@@ -42,7 +42,7 @@ public class User implements Serializable {
   public User(String email, String password) {
     this.email = email;
     this.password = password;
-    this.createdAt = new Date();
+    this.createdAt = new Timestamp(System.currentTimeMillis());
     isActive = false;
   }
 
@@ -62,15 +62,16 @@ public class User implements Serializable {
     return email;
   }
 
-  public Date getCreatedAt() {
-    return createdAt;
+
+  public Timestamp getCreatedAt() {
+	return createdAt;
   }
 
-  public void setCreatedAt(Date date) {
-    this.createdAt = date;
+  public void setCreatedAt(Timestamp createdAt) {
+	this.createdAt = createdAt;
   }
 
-  public void setEmail(String email) {
+public void setEmail(String email) {
     this.email = email;
   }
 

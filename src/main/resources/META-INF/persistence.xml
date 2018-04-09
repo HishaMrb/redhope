@@ -5,6 +5,8 @@
 		<jta-data-source>java:/datasources/RedHopeDS</jta-data-source>
 		<class>com.mql.redhope.models.Role</class>
 		<class>com.mql.redhope.models.User</class>
+		<class>com.mql.redhope.models.Profile</class>
+		<class>com.mql.redhope.models.Token</class>
 		<properties>
 		    <property name="hibernate.hbm2ddl.auto" value="create-drop"/>
       		<property name="hibernate.show_sql" value="true"/>
